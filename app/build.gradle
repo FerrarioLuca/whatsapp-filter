@@ -1,0 +1,29 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'it.filtrogruppo.app'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId 'it.filtrogruppo.app'
+        minSdk 28
+        targetSdk 35
+        versionCode 1
+        versionName '1.0'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+// Nessuna dipendenza esterna: solo API di Android.

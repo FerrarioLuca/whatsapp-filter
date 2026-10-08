@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Filtro Gruppo</string>
+    <string name="service_name">Filtro Gruppo WhatsApp</string>
+    <string name="subtitle">Nasconde le notifiche di WhatsApp di una persona in un gruppo, lasciando passare quelle degli altri.</string>
+    <string name="me">Tu</string>
+
+    <string name="sec_permissions">1 · Permessi</string>
+    <string name="access_on">✓ Accesso alle notifiche attivo</string>
+    <string name="access_off">✗ Accesso alle notifiche non attivo</string>
+    <string name="btn_access">Attiva accesso alle notifiche</string>
+    <string name="hint_restricted">Se l\'interruttore è grigio o compare «Impostazione con limitazioni»: apri Info app, tocca il menu ⋮ in alto a destra, scegli «Consenti impostazioni con limitazioni» e riprova.</string>
+    <string name="btn_app_info">Apri Info app</string>
+    <string name="post_on">✓ Il filtro può mostrare notifiche</string>
+    <string name="post_off">✗ Il filtro non può mostrare notifiche</string>
+    <string name="btn_post">Consenti notifiche del filtro</string>
+
+    <string name="sec_target">2 · Gruppo e persone</string>
+    <string name="label_group">Nome del gruppo</string>
+    <string name="hint_group">Esattamente come appare su WhatsApp</string>
+    <string name="label_recent_groups">Gruppi visti di recente (tocca per scegliere)</string>
+    <string name="groups_empty">Ancora nessuno: compariranno qui appena arriva un messaggio in un gruppo.</string>
+    <string name="label_persons">Persone da filtrare</string>
+    <string name="hint_persons">Una per riga, come appare nelle notifiche: nome in rubrica, ~nome o numero</string>
+    <string name="label_senders">Mittenti visti in questo gruppo (tocca per aggiungere)</string>
+    <string name="senders_empty">Ancora nessuno: compariranno qui quando arrivano messaggi dal gruppo scelto.</string>
+    <string name="chip_add_prefix">"＋  "</string>
+    <string name="chip_filtered_prefix">"✓  "</string>
+    <string name="added_fmt">Aggiunto: %1$s</string>
+    <string name="btn_save">Salva</string>
+    <string name="saved">Salvato</string>
+
+    <string name="sec_behavior">3 · Comportamento</string>
+    <string name="sw_enabled">Filtro attivo</string>
+    <string name="sw_alert">Il gruppo è silenzioso su WhatsApp: fai suonare il filtro</string>
+    <string name="hint_alert">Consigliato. Senza questa modalità il suono di WhatsApp parte prima che il filtro possa intervenire, quindi la notifica sparisce ma il telefono suona lo stesso. Con questa modalità: su WhatsApp apri il gruppo → Notifiche personalizzate, attivale e togli suono, vibrazione e alta priorità. Poi accendi questo interruttore: il filtro suonerà solo per i messaggi degli altri.</string>
+    <string name="btn_wa_settings">Apri le notifiche di WhatsApp</string>
+    <string name="btn_sound">Suono delle notifiche del filtro</string>
+    <string name="wa_not_found">WhatsApp non trovato</string>
+
+    <string name="sec_status">Stato</string>
+    <string name="stats_fmt">Messaggi filtrati finora: %1$d</string>
+    <string name="last_event_none">Nessun messaggio dal gruppo scelto da quando il filtro è attivo.</string>
+    <string name="last_event_fmt">Ultima notifica del gruppo alle %1$s: %2$d messaggi, %3$d della persona filtrata.</string>
+
+    <string name="ch_alert_name">Messaggi del gruppo</string>
+    <string name="ch_alert_desc">Messaggi degli altri partecipanti, con suono.</string>
+    <string name="ch_silent_name">Messaggi del gruppo (silenziosi)</string>
+    <string name="ch_silent_desc">Copia filtrata quando WhatsApp ha già suonato.</string>
+</resources>

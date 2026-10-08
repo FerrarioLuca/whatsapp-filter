@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="24dp"
+        android:paddingBottom="32dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textColor="@color/text"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/subtitle"
+            android:textColor="@color/text2"
+            android:textSize="15sp" />
+
+        <!-- 1. Permessi -->
+        <LinearLayout style="@style/Card">
+
+            <TextView style="@style/SectionTitle" android:text="@string/sec_permissions" />
+
+            <TextView
+                android:id="@+id/tv_access"
+                style="@style/Status" />
+
+            <Button
+                android:id="@+id/btn_access"
+                style="@style/PrimaryButton"
+                android:text="@string/btn_access" />
+
+            <TextView style="@style/Hint" android:text="@string/hint_restricted" />
+
+            <Button
+                android:id="@+id/btn_app_info"
+                style="@style/SecondaryButton"
+                android:text="@string/btn_app_info" />
+
+            <TextView
+                android:id="@+id/tv_post"
+                style="@style/Status"
+                android:layout_marginTop="12dp" />
+
+            <Button
+                android:id="@+id/btn_post"
+                style="@style/PrimaryButton"
+                android:text="@string/btn_post" />
+        </LinearLayout>
+
+        <!-- 2. Gruppo e persone -->
+        <LinearLayout style="@style/Card">
+
+            <TextView style="@style/SectionTitle" android:text="@string/sec_target" />
+
+            <TextView style="@style/Label" android:text="@string/label_group" />
+
+            <EditText
+                android:id="@+id/et_group"
+                style="@style/Field"
+                android:hint="@string/hint_group"
+                android:inputType="text"
+                android:importantForAutofill="no" />
+
+            <TextView style="@style/Label" android:text="@string/label_recent_groups" />
+
+            <TextView
+                android:id="@+id/tv_groups_empty"
+                style="@style/Hint"
+                android:text="@string/groups_empty" />
+
+            <LinearLayout
+                android:id="@+id/box_groups"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <TextView style="@style/Label" android:text="@string/label_persons" />
+
+            <EditText
+                android:id="@+id/et_persons"
+                style="@style/Field"
+                android:gravity="top|start"
+                android:hint="@string/hint_persons"
+                android:inputType="textMultiLine|textNoSuggestions"
+                android:minLines="3"
+                android:importantForAutofill="no" />
+
+            <TextView style="@style/Label" android:text="@string/label_senders" />
+
+            <TextView
+                android:id="@+id/tv_senders_empty"
+                style="@style/Hint"
+                android:text="@string/senders_empty" />
+
+            <LinearLayout
+                android:id="@+id/box_senders"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <Button
+                android:id="@+id/btn_save"
+                style="@style/PrimaryButton"
+                android:text="@string/btn_save" />
+        </LinearLayout>
+
+        <!-- 3. Comportamento -->
+        <LinearLayout style="@style/Card">
+
+            <TextView style="@style/SectionTitle" android:text="@string/sec_behavior" />
+
+            <Switch
+                android:id="@+id/sw_enabled"
+                style="@style/SwitchRow"
+                android:text="@string/sw_enabled" />
+
+            <Switch
+                android:id="@+id/sw_alert"
+                style="@style/SwitchRow"
+                android:text="@string/sw_alert" />
+
+            <TextView style="@style/Hint" android:text="@string/hint_alert" />
+
+            <Button
+                android:id="@+id/btn_wa_settings"
+                style="@style/SecondaryButton"
+                android:text="@string/btn_wa_settings" />
+
+            <Button
+                android:id="@+id/btn_sound"
+                style="@style/SecondaryButton"
+                android:text="@string/btn_sound" />
+        </LinearLayout>
+
+        <!-- Stato -->
+        <LinearLayout style="@style/Card">
+
+            <TextView style="@style/SectionTitle" android:text="@string/sec_status" />
+
+            <TextView
+                android:id="@+id/tv_stats"
+                style="@style/Status" />
+
+            <TextView
+                android:id="@+id/tv_last"
+                style="@style/Hint" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
