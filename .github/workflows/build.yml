@@ -11,21 +11,29 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-java@v4
+      - uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: '17'
 
-      - uses: android-actions/setup-android@v3
-
-      - uses: gradle/actions/setup-gradle@v4
-        with:
-          gradle-version: '8.11.1'
+      - name: Controlla SDK Android
+        run: |
+          echo "ANDROID_HOME=$ANDROID_HOME"
+          ls "$ANDROID_HOME/platforms" "$ANDROID_HOME/build-tools" || true
 
       - name: Compila APK di debug
-        run: gradle assembleDebug --stacktrace
+        run: |
+          chmod +x gradlew
+          set -o pipefail
+          if ! ./gradlew assembleDebug --stacktrace --no-daemon 2>&1 | tee build.log; then
+            # Riporta gli errori come annotazioni, visibili nel riepilogo dell'esecuzione.
+            esc() { sed -e 's/%/%25/g' -e 's/\r//g' | sed ':a;N;$!ba;s/\n/%0A/g'; }
+            echo "::error title=Errori di build::$(grep -E 'error:|What went wrong|^> |FAILURE|Could not|Failed|e: ' build.log | head -60 | esc)"
+            echo "::error title=Ultime righe::$(tail -n 60 build.log | esc)"
+            exit 1
+          fi
 
       - uses: actions/upload-artifact@v4
         with:
